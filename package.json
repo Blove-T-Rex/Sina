@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd-mobile": "^2.2.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
@@ -14,7 +15,18 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "antd-mobile": "^2.2.2",
+    "axios": "^0.18.0",
+    "infinite-scroll": "^3.0.4",
+    "react-cookie": "^2.2.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1"
+  },
+  "proxy": {
+    "/api": {
+      "target": "https://m.weibo.cn",
+      "host": "m.weibo.cn",
+      "changeOrigin": true
+    }
   }
 }

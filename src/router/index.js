@@ -2,21 +2,27 @@ import React from "react"
 import {HashRouter as Router,Route,Redirect,Switch} from "react-router-dom"
 import App from "../App"
 
+import Hot from "../components/Hot"
+import Laugh from "../components/Laugh"
+import { CookiesProvider } from 'react-cookie';
+
 const router = (
 
+    <CookiesProvider>
     <Router>
         <App>
             <Switch>
-                {/* <Route path="/hot" component={Hot}/>
+                <Route path="/hot" component={Hot}/>
                 <Route path="/laugh" component={Laugh}/>
-                <Route path="/love" component={Love}/>
+                {/*  <Route path="/love" component={Love}/>
                 <Route path="/star" component={Star}/>
                 <Route path="/social" component={Social}/>
-                <Route path="/digital" component={Digital}/>
-                <Redirect from="*" to="/hot" /> */}
+                <Route path="/digital" component={Digital}/>*/}
+                <Redirect from="*" to="/hot" /> 
             </Switch>
         </App>
     </Router>
+    </CookiesProvider>
 
 )
 
