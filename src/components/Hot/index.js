@@ -4,7 +4,7 @@ import axios from "axios";
 import { PullToRefresh } from 'antd-mobile';
 import ReactDOM from "react-dom";
 import 'antd-mobile/dist/antd-mobile.css';
-
+import Header from "../Header";
 
 class Hot extends Component{
 
@@ -28,8 +28,9 @@ class Hot extends Component{
     render(){
 
         return(
-
+            
             <div className="all-card">
+            <Header></Header>
                 <ul className="all-ulcard">
                 <PullToRefresh
                 distanceToRefresh={40}
@@ -63,7 +64,7 @@ class Hot extends Component{
                         this.state.bloglist.map(item=>
                             
                             item.card_type === 9?
-                            <li key={item.mblog.id}>
+                            <li key={item.mblog.id}  onClick={this.handleClick.bind(this,item.mblog.id)}>
                             <div>
                                 <div className="card-top">
                                     <header>
@@ -194,6 +195,9 @@ class Hot extends Component{
         // }), 0);
 
     }
+    handleClick(item){
+		this.props.history.push(`/detail/${item}`);
+	}
 
 }
 

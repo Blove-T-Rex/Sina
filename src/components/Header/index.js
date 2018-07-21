@@ -58,9 +58,9 @@ class Header extends Component{
 
             <div className="header">
 
-                <header>
+                <header className="header-header">
 
-                    <div className="top">
+                    <div className="top-new">
                         <div className="top-top">
                             <div className="left l">
                                 <div className="logo"></div>

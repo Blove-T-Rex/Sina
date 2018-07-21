@@ -6,6 +6,7 @@ import ReactDOM from "react-dom";
 import 'antd-mobile/dist/antd-mobile.css';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
+import Header from "../Header"
 // function genData() {
 //     const dataArr = [];
 //     for (let i = 0; i < 20; i++) {
@@ -48,6 +49,7 @@ class Laugh extends Component{
         return(
 
             <div className="all-card">
+                <Header></Header>
                 <ul className="all-ulcard">
                 <PullToRefresh
                 damping={60}
@@ -56,7 +58,7 @@ class Laugh extends Component{
                     height: this.state.height,
                     overflow: 'auto',
                 }}
-                indicator={{  activate: "↓下拉刷新", deactivate: "↓下拉刷新", release: "↑释放更新", finish: "加载中..." }}
+                indicator={{  activate: "↓下拉刷新", deactivate: "↓下拉刷新"}}
                 direction={this.state.down ? 'down' : 'up'}
                 refreshing={this.state.refreshing}
                 onRefresh={() => {
@@ -87,7 +89,7 @@ class Laugh extends Component{
                         this.state.bloglist.map(item=>
                             
                             item.card_type === 9?
-                            <li key={item.mblog.id}>
+                            <li key={item.mblog.id} onClick={this.handleClick.bind(this,item.mblog.id)}>
                             <div>
                                 <div className="card-top">
                                     <header>
@@ -232,7 +234,9 @@ class Laugh extends Component{
     //         M_WEIBOCN_PARAMS
     //     });
     //   }
-
+    handleClick(item){
+		this.props.history.push(`/detail/${item}`);
+	}
 }
 
 export default withCookies(Laugh);

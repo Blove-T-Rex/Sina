@@ -27,6 +27,16 @@
       "target": "https://m.weibo.cn",
       "host": "m.weibo.cn",
       "changeOrigin": true
+    },
+    "/statuses": {
+      "target": "https://m.weibo.cn",
+      "host": "m.weibo.cn",
+      "changeOrigin": true
+    },
+    "/comments": {
+      "target": "https://m.weibo.cn",
+      "host": "m.weibo.cn",
+      "changeOrigin": true
     }
   }
 }
