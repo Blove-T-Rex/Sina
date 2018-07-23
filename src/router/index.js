@@ -7,9 +7,10 @@ import Report from "../components/Detail/Report";
 import Comment from "../components/Detail/Comment";
 import Attitude from "../components/Detail/Attitude";
 import Star from "../components/Star";
+import { CookiesProvider } from 'react-cookie';
 
 const router = (
-
+    <CookiesProvider>
     <Router>
         <App>
             <Switch>
@@ -35,7 +36,7 @@ const router = (
             </Switch>
         </App>
     </Router>
-
+    </CookiesProvider>
 )
 
 

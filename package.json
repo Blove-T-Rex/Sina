@@ -5,6 +5,7 @@
   "dependencies": {
     "antd-mobile": "^2.2.2",
     "react": "^16.4.1",
+    "react-cookie": "^2.2.0",
     "react-dom": "^16.4.1",
     "react-infinite-scroller": "^1.2.0",
     "react-pull-to-refresh": "^1.1.2",
